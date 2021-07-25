@@ -44,7 +44,11 @@ module TwoFactorAuthentication
   end
 end
 
-Devise.add_module :two_factor_authenticatable, :model => 'two_factor_authentication/models/two_factor_authenticatable', :controller => :two_factor_authentication, :route => :two_factor_authentication
+Devise.add_module :two_factor_authenticatable,
+  model: 'two_factor_authentication/models/two_factor_authenticatable',
+  controller: :two_factor_authentication,
+  strategy: true,
+  route: :two_factor_authentication
 
 require 'two_factor_authentication/orm/active_record' if defined?(ActiveRecord::Base)
 require 'two_factor_authentication/routes'
