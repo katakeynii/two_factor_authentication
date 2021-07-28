@@ -1,4 +1,5 @@
 require 'two_factor_authentication/version'
+require 'two_factor_authentication/strategies/two_factor_authenticatable'
 require 'devise'
 require 'active_support/concern'
 require "active_model"
