@@ -1,6 +1,7 @@
 module Devise
     module Strategies
-      class TwoFactorAuthenticatable < Devise::Strategies::DatabaseAuthenticatable
+    #   class TwoFactorAuthenticatable < Devise::Strategies::DatabaseAuthenticatable
+    class TwoFactorAuthenticatable < Devise::Strategies::Base
 
       end
     end
