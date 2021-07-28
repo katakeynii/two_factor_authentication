@@ -1,7 +1,7 @@
 module Devise
     module Strategies
     #   class TwoFactorAuthenticatable < Devise::Strategies::DatabaseAuthenticatable
-        class TwoFactorAuthenticatable < Devise::Strategies::Base
+        class TwoFactorAuthenticatable < Devise::Strategies::Authenticatable
             def authenticate!
                 resource  = mapping.to.find_for_database_authentication(authentication_hash)
                 success!(resource)
